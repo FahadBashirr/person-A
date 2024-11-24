@@ -1,0 +1,83 @@
+⁠ python
+from datetime import datetime
+
+def generate_unemployment_report():
+    # Report Title
+    report_title = "Global Unemployment Report"
+    subtitle = "Prepared for: GLOBAL ECONOMICS"
+    date = datetime.now().strftime("%B %d, %Y")
+    
+    # Report Content
+    introduction = (
+        "Unemployment is a critical issue affecting economic stability, "
+        "societal well-being, and individual livelihoods worldwide. This report "
+        "provides an overview of global unemployment trends, key factors influencing "
+        "unemployment rates, and measures adopted to combat joblessness."
+    )
+    
+    trends = (
+        "- Global Average Unemployment Rate: 5.7%.\n"
+        "- Regional Variations:\n"
+        "  - High rates in Sub-Saharan Africa (~12%).\n"
+        "  - Declining rates in East Asia (~4%).\n"
+        "- Impact of the COVID-19 recovery on employment sectors."
+    )
+    
+    factors = (
+        "Economic Factors:\n"
+        "- Recession or slow economic growth.\n"
+        "- Inflation and cost of living crises.\n\n"
+        "Technological Factors:\n"
+        "- Automation and AI replacing traditional jobs.\n"
+        "- Digital divide affecting job access.\n\n"
+        "Social & Political Factors:\n"
+        "- Gender and youth unemployment disparities.\n"
+        "- Geopolitical conflicts and forced migrations."
+    )
+    
+    solutions = (
+        "Government Policies:\n"
+        "- Job creation programs and incentives for startups.\n"
+        "- Social safety nets and unemployment benefits.\n\n"
+        "Private Sector Initiatives:\n"
+        "- Corporate upskilling programs.\n"
+        "- Investment in sustainable business models.\n\n"
+        "Global Collaboration:\n"
+        "- Initiatives like the ILO's 'Decent Work Agenda.'\n"
+        "- Cross-border investment in human capital."
+    )
+    
+    acknowledgments = (
+        "Acknowledgments:\n"
+        "This report references data and insights from the following sources:\n"
+        "- International Labour Organization (ILO)\n"
+        "- World Bank\n"
+        "- National statistics agencies"
+    )
+    
+    # Compile Report
+    report = (
+        f"{report_title}\n"
+        f"{subtitle}\n"
+        f"Date: {date}\n\n"
+        "Introduction:\n"
+        f"{introduction}\n\n"
+        "Global Trends:\n"
+        f"{trends}\n\n"
+        "Key Factors Influencing Unemployment:\n"
+        f"{factors}\n\n"
+        "Solutions to Combat Unemployment:\n"
+        f"{solutions}\n\n"
+        f"{acknowledgments}\n"
+        "Prepared By: Fahad Anwar and Harjot"
+    )
+    
+    # Save Report
+    file_name = "Global_Unemployment_Report.txt"
+    with open(file_name, "w") as file:
+        file.write(report)
+    return file_name
+
+# Generate the report
+report_file = generate_unemployment_report()
+print(f"Report saved as {report_file}") ⁠
